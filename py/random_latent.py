@@ -69,7 +69,7 @@ class RandomEmptyLatent:
         width = int(math.sqrt(pixel_count * ratio / 64) + 0.5)
         height = int(width / ratio + 0.5)
 
-        latent = torch.zeros(
+        latent = torch.rand(
             (batch_size, 4, height, width),
             device=self.device,
         )
